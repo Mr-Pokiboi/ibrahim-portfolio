@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibrahim Rai Chaka | Software Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0f172a;
+    --card:#111827;
+    --text:#e2e8f0;
+    --accent:#38bdf8;
+}
+
+.light-mode{
+    --bg:#f1f5f9;
+    --card:#ffffff;
+    --text:#0f172a;
+    --accent:#2563eb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:0.3s;
+    scroll-behavior:smooth;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:var(--card);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+header h3{
+    color:var(--accent);
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    margin-left:20px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+.toggle-btn{
+    margin-left:20px;
+    padding:6px 10px;
+    background:var(--accent);
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* SECTION */
+section{
+    padding:100px 8%;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
+    min-width:280px;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.hero-text span{
+    color:var(--accent);
+}
+
+.typing{
+    margin-top:10px;
+    font-size:20px;
+    color:var(--accent);
+}
+
+.hero-img{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-img img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid var(--accent);
+    box-shadow:0 0 40px rgba(56,189,248,0.4);
+}
+
+/* CARD */
+.card{
+    background:var(--card);
+    padding:30px;
+    border-radius:15px;
+    margin-top:40px;
+}
+
+/* SKILL BARS */
+.skill-bar{
+    margin-top:20px;
+}
+
+.skill-bar p{
+    margin-bottom:5px;
+    font-weight:600;
+}
+
+.bar{
+    width:100%;
+    height:10px;
+    background:rgba(255,255,255,0.1);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.bar span{
+    display:block;
+    height:100%;
+    background:var(--accent);
+    border-radius:10px;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.project{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:10px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:var(--accent);
+    color:#000;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+}
+
+/* SOCIAL */
+.socials a{
+    margin-right:15px;
+    text-decoration:none;
+    color:var(--accent);
+    font-weight:600;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:var(--card);
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h3>Ibrahim Rai Chaka</h3>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="toggle-btn" onclick="toggleMode()">Mode</button>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Ibrahim Rai Chaka</span></h1>
+        <div class="typing" id="typing"></div>
+        <a href="#contact" class="btn">Lets connect</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="ibrahim.jpg" alt="Ibrahim Rai Chaka">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="card">
+    <h2>Professional Profile</h2>
+    <p style="margin-top:15px;">
+        I am a results-driven Web Developer with strong experience in
+        building scalable web applications, automation systems, and backend solutions.
+        I focus on writing and maintainable code and delivering high-performance systems.
+    </p>
+
+    <div style="margin-top:25px;">
+        <h3>Why I'm a Strong Developer</h3>
+        <ul style="margin-top:10px; line-height:1.8;">
+            <li>✔ Strong problem-solving skills</li>
+            <li>✔ Clean and scalable code architecture</li>
+            <li>✔ Automation and bot development expertise</li>
+            <li>✔ API integration and backend systems</li>
+            <li>✔ Continuous learner and adaptable</li>
+        </ul>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="card">
+    <h2>Technical Expertise</h2>
+
+    <div class="skill-bar">
+        <p>HTML & CSS</p>
+        <div class="bar"><span style="width:95%"></span></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>JavaScript</p>
+        <div class="bar"><span style="width:90%"></span></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>Node.js</p>
+        <div class="bar"><span style="width:85%"></span></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>Python</p>
+        <div class="bar"><span style="width:88%"></span></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>API Integration</p>
+        <div class="bar"><span style="width:92%"></span></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>Bot Development</p>
+        <div class="bar"><span style="width:94%"></span></div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="card">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>Automation Bot System</h3>
+            <p>Advanced bot deployment and automation system.</p>
+        </div>
+        <div class="project">
+            <h3>Web Dashboard</h3>
+            <p>Admin dashboard with authentication and API connection.</p>
+        </div>
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Responsive modern developer portfolio.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="card">
+    <h2>Contact</h2>
+    <div class="socials">
+        <a href="https://https://github.com/Mr-Pokiboi" target="_blank">GitHub</a>
+        <a href="https://wa.me/254112880370" target="_blank">WhatsApp</a>
+        <a href="mailto:raiibrahim188@gmail.com">Email</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Ibrahim Rai Chaka | Web Developer
+</footer>
+
+<script>
+const roles = ["Web Developer","Bot Developer","ICT"];
+let i = 0;
+let j = 0;
+let current = "";
+let deleting = false;
+
+function typeEffect(){
+    current = roles[i];
+    if(!deleting){
+        document.getElementById("typing").textContent = current.slice(0,++j);
+        if(j === current.length){
+            deleting = true;
+            setTimeout(typeEffect,1000);
+            return;
+        }
+    }else{
+        document.getElementById("typing").textContent = current.slice(0,--j);
+        if(j === 0){
+            deleting = false;
+            i = (i+1) % roles.length;
+        }
+    }
+    setTimeout(typeEffect,100);
+}
+typeEffect();
+
+function toggleMode(){
+    document.body.classList.toggle("light-mode");
+}
+</script>
+
+</body>
+</html>
